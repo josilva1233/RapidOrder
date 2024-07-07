@@ -1,0 +1,15 @@
+{
+    "name": "josil/rapid-order",
+    "autoload": {
+        "psr-4": {
+            "Josil\\RapidOrder\\": "api/"
+        }
+    },
+    "authors": [
+        {
+            "name": "josias Silva",
+            "email": "josilva1233@gmail.com"
+        }
+    ],
+    "require": {}
+}
