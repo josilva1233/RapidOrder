@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Summary of namespace App
+ */
 require 'models/UserModel.php';
 require 'models/OrderModel.php';
 require 'controllers/AuthController.php';
@@ -9,6 +11,9 @@ require 'controllers/OrderController.php';
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = explode('/', $uri);
 
+/**
+ * Summary of if ($uri[3] === 'users') route frontend
+ */
 if ($uri[3] === 'users') {
     $controller = new UserController();
     if (isset($uri[3])) {

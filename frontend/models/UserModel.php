@@ -1,4 +1,7 @@
 <?php
+/**
+ * Summary of UserModel
+ */
 
 class UserModel {
     private $apiUrl = 'http://localhost/rapidorder/backend/api/users';

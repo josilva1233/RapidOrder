@@ -1,3 +1,4 @@
+<!-- sidebar -->
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -19,6 +20,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/rapidorder/frontend/orders/list">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/rapidorder/frontend/orders/user_orders">Orders User</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/rapidorder/frontend/login">Login</a>

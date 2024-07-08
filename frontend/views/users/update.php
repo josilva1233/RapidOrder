@@ -1,5 +1,7 @@
+<!-- Include templates -->
 <?php include 'templates/header.php'; ?>
 <?php include 'templates/sidebar.php'; ?>
+<!-- Update User -->
 <main>
     <h2>Update User</h2>
     <form action="users/update/<?php echo $user['id']; ?>" method="POST">

@@ -1,6 +1,7 @@
+<!-- Include templates -->
 <?php include 'templates/header.php'; ?>
 <?php include 'templates/sidebar.php'; ?>
-
+<!-- Users -->
 <main>
     <h2>Users</h2>
     <a href="create">Create User</a>
@@ -36,5 +37,5 @@
         </tbody>
     </table>
 </main>
-
+<!-- Include templates -->
 <?php include 'templates/footer.php'; ?>

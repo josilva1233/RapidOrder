@@ -1,6 +1,7 @@
+<!-- Include templates -->
 <?php include 'templates/header.php'; ?>
 <?php include 'templates/sidebar.php'; ?>
-
+<!-- User Orders -->
 <main>
     <h2>User Orders</h2>
     <table>
@@ -24,5 +25,5 @@
         </tbody>
     </table>
 </main>
-
+<!-- Include templates -->
 <?php include 'templates/footer.php'; ?>

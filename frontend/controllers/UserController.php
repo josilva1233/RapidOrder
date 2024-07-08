@@ -1,4 +1,7 @@
 <?php
+/**
+ * Summary of namespace App\Controllers
+*/
 
 class UserController {
     private $userModel;

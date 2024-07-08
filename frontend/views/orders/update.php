@@ -1,6 +1,7 @@
+<!-- Include templates -->
 <?php include 'templates/header.php'; ?>
 <?php include 'templates/sidebar.php'; ?>
-
+<!-- Update Order -->
 <main>
     <h2>Update Order</h2>
     <form action="orders/update/<?php echo $order['id']; ?>" method="POST">
@@ -15,5 +16,5 @@
         <button type="submit">Update</button>
     </form>
 </main>
-
+<!-- Include templates -->
 <?php include 'templates/footer.php'; ?>

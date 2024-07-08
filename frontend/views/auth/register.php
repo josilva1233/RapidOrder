@@ -1,6 +1,7 @@
+<!-- Include templates -->
 <?php include 'templates/header.php'; ?>
 <?php include 'templates/sidebar.php'; ?>
-
+<!-- Register -->
 <main>
     <h2>Register</h2>
     <form action="auth/register" method="POST">
@@ -13,5 +14,5 @@
         <button type="submit">Register</button>
     </form>
 </main>
-
+<!-- Include templates -->
 <?php include 'templates/footer.php'; ?>

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Summary of class OrderModel
+*/
 class OrderModel {
     private $apiUrl = 'http://localhost/rapidorder/backend/api/orders';
 

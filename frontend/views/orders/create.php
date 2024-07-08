@@ -1,6 +1,7 @@
+<!-- Include templates -->
 <?php include 'templates/header.php'; ?>
 <?php include 'templates/sidebar.php'; ?>
-
+<!-- Create Order -->
 <main>
     <h2>Create Order</h2>
     <form action="create/" method="POST">
@@ -15,5 +16,5 @@
         <button type="submit">Create</button>
     </form>
 </main>
-
+<!-- Include templates -->
 <?php include 'templates/footer.php'; ?>
