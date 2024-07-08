@@ -42,12 +42,12 @@ if ($uri[3] === 'users') {
             $controller->userOrders($uri[4]);
         }
     }
-} elseif ($uri[3] === 'auth') {
+} elseif ($uri[4] === 'auth') {
     $controller = new AuthController();
     if (isset($uri[4])) {
         if ($uri[5] === 'login') {
             $controller->login();
-        } elseif ($uri[4] === 'register') {
+        } elseif ($uri[5] === 'register') {
             $controller->register();
         }
     }

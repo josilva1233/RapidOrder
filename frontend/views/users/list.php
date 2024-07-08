@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($users as $user): ?>
+            <?php foreach ($users as $user) : ?>
                 <tr>
                     <td><?php echo $user['id']; ?></td>
                     <td><?php echo $user['last_name']; ?></td>
@@ -29,8 +29,8 @@
                     <td><?php echo $user['phone_number']; ?></td>
                     <td><?php echo $user['birth_date']; ?></td>
                     <td>
-                        <a href="update/<?php echo $user['id']; ?>">Edit</a>
-                        <a href="delete/<?php echo $user['id']; ?>">Delete</a>
+                        <a href="update/<?php echo $user['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="delete/<?php echo $user['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

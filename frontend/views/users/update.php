@@ -20,5 +20,5 @@
         <button type="submit">Update</button>
     </form>
 </main>
-
+<!-- Include templates -->
 <?php include 'templates/footer.php'; ?>

@@ -278,8 +278,8 @@ th {
 
 /* Action Links Styling */
 td a {
-    margin-right: 10px;
-    padding: 5px 10px;
+    margin-right: auto;
+    padding: 5px 5px;
     text-decoration: none;
     color: #007bff;
     border: 1px solid #007bff;

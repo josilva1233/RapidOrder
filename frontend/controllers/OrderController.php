@@ -38,7 +38,6 @@ class OrderController {
             ];
             $this->orderModel->updateOrder($id, $data);
             header("Location: /rapidorder/frontend/orders/list");
-            var_dump($id);
         }
         $order = $this->orderModel->getOrder($id);
         include 'views/orders/update.php';
