@@ -3,7 +3,7 @@
 
 <main>
     <h2>Create Order</h2>
-    <form action="orders/create/" method="POST">
+    <form action="create/" method="POST">
         <label for="user_id">User ID:</label>
         <input type="text" id="user_id" name="user_id" required>
         <label for="description">description:</label>

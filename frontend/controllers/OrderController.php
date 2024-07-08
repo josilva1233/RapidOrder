@@ -21,7 +21,7 @@ class OrderController {
                 'price' => $_POST['price'],
             ];
             $this->orderModel->createOrder($data);
-            header('Location: /orders/list');
+            header('Location: /rapidorder/frontend/orders/create');
         }
         include 'views/orders/create.php';
     }
@@ -30,11 +30,13 @@ class OrderController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = [
                 'user_id' => $_POST['user_id'],
-                'product' => $_POST['product'],
+                'description' => $_POST['description'],
                 'quantity' => $_POST['quantity'],
+                'price' => $_POST['price'],
             ];
             $this->orderModel->updateOrder($id, $data);
-            header('Location: /orders/list');
+            header("Location: /rapidorder/frontend/orders/list");
+            var_dump($id);
         }
         $order = $this->orderModel->getOrder($id);
         include 'views/orders/update.php';
@@ -42,7 +44,7 @@ class OrderController {
 
     public function delete($id) {
         $this->orderModel->deleteOrder($id);
-        header('Location: /rapidorder/frontend/users/list');
+        header('Location: /rapidorder/frontend/orders/list');
     }
 
     public function userOrders($userId) {

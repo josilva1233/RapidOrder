@@ -15,12 +15,15 @@ class UserController {
     public function create() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = [
-                'name' => $_POST['name'],
+                'last_name' => $_POST['last_name'],
+                'fist_name' => $_POST['fist_name'],
+                'document' => $_POST['document'],
                 'email' => $_POST['email'],
-                'password' => $_POST['password'],
+                'phone_number' => $_POST['phone_number'],
+                'birth_date' => $_POST['birth_date'],
             ];
             $this->userModel->createUser($data);
-            header('Location: /users/list');
+            header('Location: /rapidorder/frontend/users/list');
         }
         include 'views/users/create.php';
     }
@@ -33,7 +36,7 @@ class UserController {
                 'password' => $_POST['password'],
             ];
             $this->userModel->updateUser($id, $data);
-            header('Location: /users/list');
+            header('Location: /rapidorder/frontend/users/list');
         }
         $user = $this->userModel->getUser($id);
         include 'views/users/update.php';
