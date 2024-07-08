@@ -12,7 +12,7 @@
 </head>
 <body>
 <header class="bg-primary text-white p-3">
-    <h1>My App</h1>
+    <h1>RapidOrder</h1>
     <div class="user-info">
         <span>User: <?php echo $_SESSION['user']['list_name'] ?? 'Guest'; ?></span>
     </div>

@@ -33,8 +33,8 @@ if ($uri[3] === 'users') {
             $controller->update($uri[5]);
         } elseif ($uri[4] === 'delete' && isset($uri[4])) {
             $controller->delete($uri[5]);
-        } elseif ($uri[4] === 'user' && isset($uri[4])) {
-            $controller->userOrders($uri[5]);
+        } elseif ($uri[4] === 'user_orders' && isset($uri[4])) {
+            $controller->userOrders($uri[4]);
         }
     }
 } elseif ($uri[3] === 'auth') {

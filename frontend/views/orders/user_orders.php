@@ -1,5 +1,5 @@
-<?php include '../../templates/header.php'; ?>
-<?php include '../../templates/sidebar.php'; ?>
+<?php include 'templates/header.php'; ?>
+<?php include 'templates/sidebar.php'; ?>
 
 <main>
     <h2>User Orders</h2>
@@ -17,7 +17,7 @@
                 <tr>
                     <td><?php echo $order['id']; ?></td>
                     <td><?php echo $order['user_id']; ?></td>
-                    <td><?php echo $order['product']; ?></td>
+                    <td><?php echo $order['description']; ?></td>
                     <td><?php echo $order['quantity']; ?></td>
                 </tr>
             <?php endforeach; ?>
@@ -25,4 +25,4 @@
     </table>
 </main>
 
-<?php include '../../templates/footer.php'; ?>
+<?php include 'templates/footer.php'; ?>
