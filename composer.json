@@ -1,7 +1,5 @@
 {
     "name": "josil/rapid-order",
-    "description": "Ordering system",
-    "license": "Apache License",
     "autoload": {
         "psr-4": {
             "Josil\\RapidOrder\\": "src/"
@@ -13,5 +11,7 @@
             "email": "josilva1233@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "7"
+    }
 }
