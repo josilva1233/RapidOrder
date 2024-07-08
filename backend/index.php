@@ -22,9 +22,9 @@ if (preg_match('/\/api\/users\/(\d+)/', $requestUri, $matches)) {
     } elseif ($requestMethod === 'DELETE') {
         $userController->delete($id);
     }
-} elseif ($requestUri === '/rapidorder/api/users' && $requestMethod === 'GET') {
+} elseif ($requestUri === '/rapidorder/backend/api/users' && $requestMethod === 'GET') {
     $userController->index();
-} elseif ($requestUri === '/rapidorder/api/users' && $requestMethod === 'POST') {
+} elseif ($requestUri === '/rapidorder/backend/api/users' && $requestMethod === 'POST') {
     $userController->create();
 } elseif (preg_match('/\/api\/orders\/(\d+)/', $requestUri, $matches)) {
     $id = $matches[1];
@@ -35,9 +35,9 @@ if (preg_match('/\/api\/users\/(\d+)/', $requestUri, $matches)) {
     } elseif ($requestMethod === 'DELETE') {
         $orderController->delete($id);
     }
-} elseif ($requestUri === '/rapidorder/api/orders' && $requestMethod === 'GET') {
+} elseif ($requestUri === '/rapidorder/backend/api/orders' && $requestMethod === 'GET') {
     $orderController->index();
-} elseif ($requestUri === '/rapidorder/api/orders' && $requestMethod === 'POST') {
+} elseif ($requestUri === '/rapidorder/backend/api/orders' && $requestMethod === 'POST') {
     $orderController->create();
 } else {
     header("HTTP/1.0 404 Not Found");

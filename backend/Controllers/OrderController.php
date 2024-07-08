@@ -1,41 +1,43 @@
 <?php
-// /controllers/UserController.php
+/**
+ * Summary of namespace App\Controllers
+ */
 namespace App\Controllers;
 
-use App\Models\User;
+use App\Models\Order;
 use PDO;
 
-class UserController {
-    private $userModel;
+class OrderController {
+    private $OrderModel;
 
     public function __construct(PDO $db) {
-        $this->userModel = new User($db);
+        $this->OrderModel = new Order($db);
     }
 
     public function index() {
-        $users = $this->userModel->findAll();
-        echo json_encode($users);
+        $Orders = $this->OrderModel->findAll();
+        echo json_encode($Orders);
     }
 
     public function show($id) {
-        $user = $this->userModel->findById($id);
-        echo json_encode($user);
+        $Order = $this->OrderModel->findById($id);
+        echo json_encode($Order);
     }
 
     public function create() {
         $data = json_decode(file_get_contents("php://input"), true);
-        $this->userModel->create($data);
+        $this->OrderModel->create($data);
         echo json_encode(['status' => 'success']);
     }
 
     public function update($id) {
         $data = json_decode(file_get_contents("php://input"), true);
-        $this->userModel->update($id, $data);
+        $this->OrderModel->update($id, $data);
         echo json_encode(['status' => 'success']);
     }
 
     public function delete($id) {
-        $this->userModel->delete($id);
+        $this->OrderModel->delete($id);
         echo json_encode(['status' => 'success']);
     }
 }

@@ -1,5 +1,7 @@
 <?php
-//Connection to database
+/**
+ * Summary of namespace App\Config
+ */
 namespace App\Config;
 
 use PDO;

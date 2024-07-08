@@ -1,9 +1,11 @@
 <?php
-// /models/User.php
+/**
+ * Summary of namespace App\Models
+ */
 namespace App\Models;
 
-class User extends Model {
-    protected $table = 'users';
+class Order extends Model {
+    protected $table = 'orders';
 
     public function __construct($db) {
         parent::__construct($db);

@@ -12,7 +12,6 @@ class UserTest extends TestCase {
     protected function setUp(): void {
         $this->db = Database::connect();
         $this->userModel = new User($this->db);
-        $this->userModel->delete($user);
 
     }
 

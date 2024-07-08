@@ -1,41 +1,43 @@
 <?php
-// Class Ordercontroller
+/**
+ * Summary of namespace App\Controllers
+ */
 namespace App\Controllers;
 
-use App\Models\Order;
+use App\Models\User;
 use PDO;
 
-class OrderController {
-    private $OrderModel;
+class UserController {
+    private $userModel;
 
     public function __construct(PDO $db) {
-        $this->OrderModel = new Order($db);
+        $this->userModel = new User($db);
     }
 
     public function index() {
-        $Orders = $this->OrderModel->findAll();
-        echo json_encode($Orders);
+        $users = $this->userModel->findAll();
+        echo json_encode($users);
     }
 
     public function show($id) {
-        $Order = $this->OrderModel->findById($id);
-        echo json_encode($Order);
+        $user = $this->userModel->findById($id);
+        echo json_encode($user);
     }
 
     public function create() {
         $data = json_decode(file_get_contents("php://input"), true);
-        $this->OrderModel->create($data);
+        $this->userModel->create($data);
         echo json_encode(['status' => 'success']);
     }
 
     public function update($id) {
         $data = json_decode(file_get_contents("php://input"), true);
-        $this->OrderModel->update($id, $data);
+        $this->userModel->update($id, $data);
         echo json_encode(['status' => 'success']);
     }
 
     public function delete($id) {
-        $this->OrderModel->delete($id);
+        $this->userModel->delete($id);
         echo json_encode(['status' => 'success']);
     }
 }
