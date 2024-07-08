@@ -2,7 +2,7 @@
     "name": "josil/rapid-order",
     "autoload": {
         "psr-4": {
-            "Josil\\RapidOrder\\": "api/"
+            "Josil\\RapidOrder\\": "src/"
         }
     },
     "authors": [
@@ -11,5 +11,9 @@
             "email": "josilva1233@gmail.com"
         }
     ],
-    "require": {}
+    
+        "require": {
+            "phpunit/phpunit": "^9"
+        }
+    
 }

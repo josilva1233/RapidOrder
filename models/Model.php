@@ -24,7 +24,13 @@ abstract class Model {
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user === false) {
+            return []; // Retorna um array vazio se nenhum usuário for encontrado
+        }
+    
+        return $user; 
     }
 
     public function create(array $data) {

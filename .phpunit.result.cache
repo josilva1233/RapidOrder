@@ -1,0 +1,1 @@
+{"version":1,"defects":{"UserTest::testCreateUser":4,"UserTest::testFindUserById":3,"UserTest::testUpdateUser":4,"UserTest::testDeleteUser":3},"times":{"UserTest::testCreateUser":0.025,"UserTest::testFindUserById":0.005,"UserTest::testUpdateUser":0.006,"UserTest::testDeleteUser":0.007}}
