@@ -1,5 +1,5 @@
-<?php include '../templates/header.php'; ?>
-<?php include '../templates/sidebar.php'; ?>
+<?php include '../../templates/header.php'; ?>
+<?php include '../../templates/sidebar.php'; ?>
 
 <main>
     <h2>User Orders</h2>
@@ -25,4 +25,4 @@
     </table>
 </main>
 
-<?php include '../templates/footer.php'; ?>
+<?php include '../../templates/footer.php'; ?>

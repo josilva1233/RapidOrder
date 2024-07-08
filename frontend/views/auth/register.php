@@ -1,9 +1,9 @@
-<?php include '../templates/header.php'; ?>
-<?php include '../templates/sidebar.php'; ?>
+<?php include '../../templates/header.php'; ?>
+<?php include '../../templates/sidebar.php'; ?>
 
 <main>
     <h2>Register</h2>
-    <form action="/auth/register" method="POST">
+    <form action="auth/register" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         <label for="email">Email:</label>
@@ -14,4 +14,4 @@
     </form>
 </main>
 
-<?php include '../templates/footer.php'; ?>
+<?php include '../../templates/footer.php'; ?>

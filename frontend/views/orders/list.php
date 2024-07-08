@@ -1,5 +1,5 @@
-<?php include '../../templates/header.php'; ?>
-<?php include '../../templates/sidebar.php'; ?>
+<?php include 'templates/header.php'; ?>
+<?php include 'templates/sidebar.php'; ?>
 
 <main>
     <h2>Orders</h2>
@@ -9,8 +9,9 @@
             <tr>
                 <th>ID</th>
                 <th>User ID</th>
-                <th>Product</th>
-                <th>Quantity</th>
+                <th>description </th>
+                <th>quantity</th>
+                <th>price</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -19,8 +20,9 @@
                 <tr>
                     <td><?php echo $order['id']; ?></td>
                     <td><?php echo $order['user_id']; ?></td>
-                    <td><?php echo $order['product']; ?></td>
+                    <td><?php echo $order['description']; ?></td>
                     <td><?php echo $order['quantity']; ?></td>
+                    <td><?php echo $order['price']; ?></td>
                     <td>
                         <a href="/orders/update/<?php echo $order['id']; ?>">Edit</a>
                         <a href="/orders/delete/<?php echo $order['id']; ?>">Delete</a>
@@ -31,4 +33,4 @@
     </table>
 </main>
 
-<?php include '../templates/footer.php'; ?>
+<?php include 'templates/footer.php'; ?>
