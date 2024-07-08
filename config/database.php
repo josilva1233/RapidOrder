@@ -1,5 +1,5 @@
 <?php
-// /config/database.php
+//Connection to database
 namespace App\Config;
 
 use PDO;

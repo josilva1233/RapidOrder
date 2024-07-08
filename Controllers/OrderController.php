@@ -1,5 +1,5 @@
 <?php
-// /controllers/OrderController.php
+// Class Ordercontroller
 namespace App\Controllers;
 
 use App\Models\Order;
