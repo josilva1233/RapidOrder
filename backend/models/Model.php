@@ -1,5 +1,7 @@
 <?php
-// /models/Model.php
+/**
+ * Summary of namespace App\Models
+ */
 namespace App\Models;
 
 use PDO;

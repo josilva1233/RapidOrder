@@ -1,5 +1,7 @@
 <?php
-// /controllers/UserController.php
+/**
+ * Summary of namespace App\Controllers
+ */
 namespace App\Controllers;
 
 use App\Models\User;

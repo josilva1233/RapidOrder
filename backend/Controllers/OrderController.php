@@ -1,5 +1,7 @@
 <?php
-// Class Ordercontroller
+/**
+ * Summary of namespace App\Controllers
+ */
 namespace App\Controllers;
 
 use App\Models\Order;

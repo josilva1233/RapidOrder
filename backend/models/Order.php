@@ -1,5 +1,7 @@
 <?php
-// /models/User.php
+/**
+ * Summary of namespace App\Models
+ */
 namespace App\Models;
 
 class Order extends Model {
