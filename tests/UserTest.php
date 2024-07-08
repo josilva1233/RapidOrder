@@ -63,8 +63,6 @@ class UserTest extends TestCase {
         }
     }
     
-    
-
     public function testUpdateUser() {
         $data = [
             'first_name' => 'Josias',
