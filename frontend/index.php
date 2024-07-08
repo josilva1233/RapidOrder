@@ -9,17 +9,19 @@ require 'controllers/OrderController.php';
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = explode('/', $uri);
 
+var_dump($uri);
+
 if ($uri[3] === 'users') {
     $controller = new UserController();
     if (isset($uri[3])) {
         if ($uri[4] === 'list') {
             $controller->list();
-        } elseif ($uri[2] === 'create') {
+        } elseif ($uri[4] === 'create') {
             $controller->create();
-        } elseif ($uri[2] === 'update' && isset($uri[3])) {
-            $controller->update($uri[3]);
-        } elseif ($uri[2] === 'delete' && isset($uri[3])) {
-            $controller->delete($uri[3]);
+        } elseif ($uri[4] === 'update' && isset($uri[4])) {
+            $controller->update($uri[5]);
+        } elseif ($uri[4] === 'delete' && isset($uri[4])) {
+            $controller->delete($uri[5]);
         }
     }
 } elseif ($uri[3] === 'orders') {
@@ -27,22 +29,22 @@ if ($uri[3] === 'users') {
     if (isset($uri[3])) {
         if ($uri[4] === 'list') {
             $controller->list();
-        } elseif ($uri[2] === 'create') {
+        } elseif ($uri[4] === 'create') {
             $controller->create();
-        } elseif ($uri[2] === 'update' && isset($uri[3])) {
-            $controller->update($uri[3]);
-        } elseif ($uri[2] === 'delete' && isset($uri[3])) {
-            $controller->delete($uri[3]);
-        } elseif ($uri[2] === 'user' && isset($uri[3])) {
-            $controller->userOrders($uri[3]);
+        } elseif ($uri[4] === 'update' && isset($uri[4])) {
+            $controller->update($uri[5]);
+        } elseif ($uri[4] === 'delete' && isset($uri[4])) {
+            $controller->delete($uri[5]);
+        } elseif ($uri[4] === 'user' && isset($uri[4])) {
+            $controller->userOrders($uri[5]);
         }
     }
 } elseif ($uri[3] === 'auth') {
     $controller = new AuthController();
-    if (isset($uri[5])) {
-        if ($uri[5] === 'login') {
+    if (isset($uri[3])) {
+        if ($uri[4] === 'login') {
             $controller->login();
-        } elseif ($uri[2] === 'register') {
+        } elseif ($uri[4] === 'register') {
             $controller->register();
         }
     }

@@ -8,6 +8,6 @@
 <header>
     <h1>My App</h1>
     <div class="user-info">
-        <span>User: <?php echo $_SESSION['user']['name'] ?? 'Guest'; ?></span>
+        <span>User: <?php echo $_SESSION['user']['list_name'] ?? 'Guest'; ?></span>
     </div>
 </header>

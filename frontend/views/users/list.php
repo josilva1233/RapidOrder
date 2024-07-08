@@ -3,7 +3,7 @@
 
 <main>
     <h2>Users</h2>
-    <a href="/users/create">Create User</a>
+    <a href="create">Create User</a>
     <table>
         <thead>
             <tr>
@@ -28,8 +28,8 @@
                     <td><?php echo $user['phone_number']; ?></td>
                     <td><?php echo $user['birth_date']; ?></td>
                     <td>
-                        <a href="/users/update/<?php echo $user['id']; ?>">Edit</a>
-                        <a href="/users/delete/<?php echo $user['id']; ?>">Delete</a>
+                        <a href="update/<?php echo $user['id']; ?>">Edit</a>
+                        <a href="delete/<?php echo $user['id']; ?>">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

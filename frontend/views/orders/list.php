@@ -3,7 +3,7 @@
 
 <main>
     <h2>Orders</h2>
-    <a href="/orders/create">Create Order</a>
+    <a href="create">Create Order</a>
     <table>
         <thead>
             <tr>
@@ -24,8 +24,8 @@
                     <td><?php echo $order['quantity']; ?></td>
                     <td><?php echo $order['price']; ?></td>
                     <td>
-                        <a href="/orders/update/<?php echo $order['id']; ?>">Edit</a>
-                        <a href="/orders/delete/<?php echo $order['id']; ?>">Delete</a>
+                        <a href="update/<?php echo $order['id']; ?>">Edit</a>
+                        <a href="delete/<?php echo $order['id']; ?>">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

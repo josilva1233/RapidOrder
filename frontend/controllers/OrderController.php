@@ -16,8 +16,9 @@ class OrderController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = [
                 'user_id' => $_POST['user_id'],
-                'product' => $_POST['product'],
+                'description' => $_POST['description'],
                 'quantity' => $_POST['quantity'],
+                'price' => $_POST['price'],
             ];
             $this->orderModel->createOrder($data);
             header('Location: /orders/list');
@@ -41,7 +42,7 @@ class OrderController {
 
     public function delete($id) {
         $this->orderModel->deleteOrder($id);
-        header('Location: /orders/list');
+        header('Location: /rapidorder/frontend/users/list');
     }
 
     public function userOrders($userId) {

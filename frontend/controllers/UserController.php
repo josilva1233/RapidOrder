@@ -41,6 +41,6 @@ class UserController {
 
     public function delete($id) {
         $this->userModel->deleteUser($id);
-        header('Location: /users/list');
+        header('Location: /rapidorder/frontend/users/list');
     }
 }
