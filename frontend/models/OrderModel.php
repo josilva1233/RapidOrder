@@ -1,7 +1,7 @@
 <?php
 
 class OrderModel {
-    private $apiUrl = 'http://localhost/backend/api/orders';
+    private $apiUrl = 'http://localhost/rapidorder/backend/api/orders';
 
     public function getAllOrders() {
         $response = file_get_contents($this->apiUrl);

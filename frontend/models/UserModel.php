@@ -1,7 +1,7 @@
 <?php
 
 class UserModel {
-    private $apiUrl = 'http://localhost/backend/api/users';
+    private $apiUrl = 'http://localhost/rapidorder/backend/api/users';
 
     public function getAllUsers() {
         $response = file_get_contents($this->apiUrl);

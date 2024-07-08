@@ -9,7 +9,7 @@ class UserController {
 
     public function list() {
         $users = $this->userModel->getAllUsers();
-        include 'views/users/list.php';
+        include '/views/users/list.php';
     }
 
     public function create() {

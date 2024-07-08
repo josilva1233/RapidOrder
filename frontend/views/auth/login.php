@@ -1,5 +1,5 @@
-<?php include '../templates/header.php'; ?>
-<?php include '../templates/sidebar.php'; ?>
+<?php include '../../templates/header.php'; ?>
+<?php include '../../templates/sidebar.php'; ?>
 
 <main>
     <h2>Login</h2>
@@ -12,4 +12,4 @@
     </form>
 </main>
 
-<?php include '../templates/footer.php'; ?>
+<?php include '../../templates/footer.php'; ?>

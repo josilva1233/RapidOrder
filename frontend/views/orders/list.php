@@ -1,5 +1,5 @@
-<?php include '../templates/header.php'; ?>
-<?php include '../templates/sidebar.php'; ?>
+<?php include '../../templates/header.php'; ?>
+<?php include '../../templates/sidebar.php'; ?>
 
 <main>
     <h2>Orders</h2>
