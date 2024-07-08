@@ -1,0 +1,34 @@
+<?php include '../templates/header.php'; ?>
+<?php include '../templates/sidebar.php'; ?>
+
+<main>
+    <h2>Orders</h2>
+    <a href="/orders/create">Create Order</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User ID</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($orders as $order): ?>
+                <tr>
+                    <td><?php echo $order['id']; ?></td>
+                    <td><?php echo $order['user_id']; ?></td>
+                    <td><?php echo $order['product']; ?></td>
+                    <td><?php echo $order['quantity']; ?></td>
+                    <td>
+                        <a href="/orders/update/<?php echo $order['id']; ?>">Edit</a>
+                        <a href="/orders/delete/<?php echo $order['id']; ?>">Delete</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</main>
+
+<?php include '../templates/footer.php'; ?>
