@@ -48,3 +48,27 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// scripts.js
+
+// Função para formatar CPF (###.###.###-##)
+function formatCPF(cpf) {
+    cpf = cpf.replace(/\D/g, ''); // Remove tudo que não é dígito
+    cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca ponto após os 3 primeiros dígitos
+    cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca ponto após os 3 próximos dígitos
+    cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca hífen antes dos últimos 2 dígitos
+    return cpf;
+}
+
+// Função para formatar telefone (## ####-#### ou (##) #####-####)
+function formatPhone(phone) {
+    phone = phone.replace(/\D/g, ''); // Remove tudo que não é dígito
+    if (phone.length === 11) {
+        phone = phone.replace(/^(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'); // Formato (##) #####-####
+    } else {
+        phone = phone.replace(/^(\d{2})(\d{4})(\d{4})/, '$1 $2-$3'); // Formato ## ####-####
+    }
+    return phone;
+}
+
+
+
