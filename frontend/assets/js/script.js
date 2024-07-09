@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Função para confirmar a ação de deletar
+    // Function to confirm the delete action
     function confirmDelete(event) {
-        event.preventDefault(); // Evita que o link seja seguido imediatamente
+        event.preventDefault(); // Prevents the link from being followed immediately
         if (confirm('Are you sure you want to delete this user?')) {
-            window.location.href = this.href; // Segue o link se o usuário confirmar
+            window.location.href = this.href; // Follows the link if the user confirms
         }
     }
 
-    // Adiciona o evento de clique para os links de deletar
+    // Adds click event for delete links
     const deleteLinks = document.querySelectorAll('.btn-danger');
     deleteLinks.forEach(function(link) {
         link.addEventListener('click', confirmDelete);
     });
 
-    // Função para mostrar o carregamento da página
+    // Function to show page loading
     function showLoading() {
         const loadingElement = document.createElement('div');
         loadingElement.id = 'loading';
@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(loadingElement);
     }
 
-    // Adiciona o evento para mostrar o carregamento ao clicar em qualquer link
+    // Adds event to show loading when clicking any link
     const allLinks = document.querySelectorAll('a');
     allLinks.forEach(function(link) {
         link.addEventListener('click', showLoading);
     });
 
-    // Remove o carregamento da página quando o conteúdo estiver totalmente carregado
+    // Removes page loading when content is fully loaded
     window.addEventListener('load', function() {
         const loadingElement = document.getElementById('loading');
         if (loadingElement) {
@@ -45,6 +45,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
 
 
