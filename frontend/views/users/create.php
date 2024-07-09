@@ -6,9 +6,9 @@
     <h2>Create User</h2>
     <form action="create/" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="fast_name" name="fast_name" required>
+        <input type="text" id="first_name" name="first_name" required>
         <label for="name">Sobrenome:</label>
-        <input type="text" id="fast_name" name="fist_name" required>
+        <input type="text" id="last_name" name="last_name" required>
         <label for="document">document:</label>
         <input type="text" id="document" name="document" required>
         <label for="email">Email:</label>

@@ -23,10 +23,10 @@
                     <td><?php echo $order['user_id']; ?></td>
                     <td><?php echo $order['description']; ?></td>
                     <td><?php echo $order['quantity']; ?></td>
-                    <td><?php echo $order['price']; ?></td>
+                    <td><?php echo $order['price']; ?></td>                    
                     <td>
-                        <a href="update/<?php echo $order['id']; ?>">Edit</a>
-                        <a href="delete/<?php echo $order['id']; ?>">Delete</a>
+                        <a href="update/<?php echo $order['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="delete/<?php echo $order['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -25,10 +25,10 @@
                         <a class="nav-link" href="/rapidorder/frontend/orders/user_orders">Orders User</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/rapidorder/frontend/login">Login</a>
+                        <a class="nav-link" href="/rapidorder/frontend/auth/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/rapidorder/frontend/register">Register</a>
+                        <a class="nav-link" href="/rapidorder/frontend/auth/register">Register</a>
                     </li>
                 </ul>
             </div>

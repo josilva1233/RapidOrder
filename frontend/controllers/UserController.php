@@ -18,8 +18,8 @@ class UserController {
     public function create() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = [
+                'first_name' => $_POST['first_name'],
                 'last_name' => $_POST['last_name'],
-                'fist_name' => $_POST['fist_name'],
                 'document' => $_POST['document'],
                 'email' => $_POST['email'],
                 'phone_number' => $_POST['phone_number'],
@@ -34,9 +34,12 @@ class UserController {
     public function update($id) {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = [
-                'name' => $_POST['name'],
+                'first_name' => $_POST['first_name'],
+                'last_name' => $_POST['last_name'],
+                'document' => $_POST['document'],
                 'email' => $_POST['email'],
-                'password' => $_POST['password'],
+                'phone_number' => $_POST['phone_number'],
+                'birth_date' => $_POST['birth_date'],
             ];
             $this->userModel->updateUser($id, $data);
             header('Location: /rapidorder/frontend/users/list');
