@@ -39,3 +39,6 @@
 </main>
 <!-- Include templates -->
 <?php include 'templates/footer.php'; ?>
+
+<!-- Include the JavaScript file -->
+<script src="assets/js/script.js"></script>
