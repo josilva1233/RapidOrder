@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Function to confirm the delete action
     function confirmDelete(event) {
         event.preventDefault(); // Prevents the link from being followed immediately
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adds click event for delete links
     const deleteLinks = document.querySelectorAll('.btn-danger');
-    deleteLinks.forEach(function(link) {
+    deleteLinks.forEach(function (link) {
         link.addEventListener('click', confirmDelete);
     });
 
@@ -33,17 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adds event to show loading when clicking any link
     const allLinks = document.querySelectorAll('a');
-    allLinks.forEach(function(link) {
+    allLinks.forEach(function (link) {
         link.addEventListener('click', showLoading);
     });
 
     // Removes page loading when content is fully loaded
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         const loadingElement = document.getElementById('loading');
         if (loadingElement) {
             loadingElement.remove();
         }
     });
+
 });
 
 
