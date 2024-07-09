@@ -1,3 +1,6 @@
+
+<!-- Include functions maskDatae -->
+<?php require_once 'helpers/functions.php'; ?>
 <!-- Include templates -->
 <?php include 'templates/header.php'; ?>
 <?php include 'templates/sidebar.php'; ?>
@@ -10,7 +13,7 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Sobrenome</th>
+                <th>Last Name</th>
                 <th>Document</th>
                 <th>Email</th>
                 <th>Phone Number</th>
@@ -24,9 +27,9 @@
                     <td><?php echo $user['id']; ?></td>
                     <td><?php echo $user['first_name']; ?></td>
                     <td><?php echo $user['last_name']; ?></td>
-                    <td><?php echo $user['document']; ?></td>
-                    <td><?php echo $user['email']; ?></td>
-                    <td><?php echo $user['phone_number']; ?></td>
+                    <td><?php echo maskData(base64_decode($user['document']), 'document'); ?></td>
+                    <td><?php echo maskData(base64_decode($user['email']), 'email'); ?></td>
+                    <td><?php echo maskData(base64_decode($user['phone_number']), 'phone'); ?></td>
                     <td><?php echo $user['birth_date']; ?></td>
                     <td>
                         <a href="update/<?php echo $user['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
@@ -39,6 +42,3 @@
 </main>
 <!-- Include templates -->
 <?php include 'templates/footer.php'; ?>
-
-<!-- Include the JavaScript file -->
-<script src="assets/js/script.js"></script>

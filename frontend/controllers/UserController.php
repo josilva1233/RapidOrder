@@ -20,9 +20,9 @@ class UserController {
             $data = [
                 'first_name' => $_POST['first_name'],
                 'last_name' => $_POST['last_name'],
-                'document' => $_POST['document'],
-                'email' => $_POST['email'],
-                'phone_number' => $_POST['phone_number'],
+                'document' => base64_encode($_POST['document']),
+                'email' => base64_encode($_POST['email']),
+                'phone_number' => base64_encode($_POST['phone_number']),
                 'birth_date' => $_POST['birth_date'],
             ];
             $this->userModel->createUser($data);
@@ -36,15 +36,19 @@ class UserController {
             $data = [
                 'first_name' => $_POST['first_name'],
                 'last_name' => $_POST['last_name'],
-                'document' => $_POST['document'],
-                'email' => $_POST['email'],
-                'phone_number' => $_POST['phone_number'],
+                'document' => base64_encode($_POST['document']),
+                'email' => base64_encode($_POST['email']),
+                'phone_number' => base64_encode($_POST['phone_number']),
                 'birth_date' => $_POST['birth_date'],
             ];
             $this->userModel->updateUser($id, $data);
             header('Location: /rapidorder/frontend/users/list');
         }
         $user = $this->userModel->getUser($id);
+        // Decodifica os dados recuperados do banco, se necessário
+        $user['document'] = base64_decode($user['document']);
+        $user['email'] = base64_decode($user['email']);
+        $user['phone_number'] = base64_decode($user['phone_number']);
         include 'views/users/update.php';
     }
 
@@ -53,3 +57,4 @@ class UserController {
         header('Location: /rapidorder/frontend/users/list');
     }
 }
+
