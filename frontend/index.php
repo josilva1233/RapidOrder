@@ -10,7 +10,6 @@ require 'controllers/OrderController.php';
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = explode('/', $uri);
-
 /**
  * Summary of if ($uri[3] === 'users') route frontend
  */
@@ -42,12 +41,12 @@ if ($uri[3] === 'users') {
             $controller->userOrders($uri[4]);
         }
     }
-} elseif ($uri[4] === 'auth') {
+} elseif ($uri[3] === 'auth') {
     $controller = new AuthController();
     if (isset($uri[4])) {
-        if ($uri[5] === 'login') {
+        if ($uri[4] === 'login') {
             $controller->login();
-        } elseif ($uri[5] === 'register') {
+        } elseif ($uri[4] === 'register') {
             $controller->register();
         }
     }

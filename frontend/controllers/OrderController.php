@@ -22,7 +22,7 @@ class OrderController {
                 'quantity' => $_POST['quantity'],
                 'price' => $_POST['price'],
             ];
-            $this->orderModel->createOrder($data);
+            $orders = $this->orderModel->createOrder($data);
             header('Location: /rapidorder/frontend/orders/create');
         }
         include 'views/orders/create.php';
@@ -40,6 +40,7 @@ class OrderController {
             header("Location: /rapidorder/frontend/orders/list");
         }
         $order = $this->orderModel->getOrder($id);
+       
         include 'views/orders/update.php';
     }
 
