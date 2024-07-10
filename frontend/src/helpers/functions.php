@@ -13,3 +13,10 @@ function maskData($data, $type) {
         return '***' . substr($data, -4);
     }
 }
+
+function isBase64Encoded($data) {
+    if (base64_encode(base64_decode($data, true)) === $data) {
+        return true;
+    }
+    return false;
+}
