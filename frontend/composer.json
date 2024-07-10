@@ -1,9 +1,8 @@
 {
     "name": "josil/frontend",
-    "description": "FrontEnd Aplication RapidOrder project MVC puro",
     "autoload": {
         "psr-4": {
-            "Josil\\Frontend\\": "frontend/"
+            "Josil\\Frontend\\": "src/"
         }
     },
     "authors": [

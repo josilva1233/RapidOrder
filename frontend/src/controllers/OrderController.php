@@ -11,7 +11,7 @@ class OrderController {
 
     public function list() {
         $orders = $this->orderModel->getAllOrders();
-        include 'views/orders/list.php';
+        include 'src/views/orders/list.php';
     }
 
     public function create() {
@@ -25,7 +25,7 @@ class OrderController {
             $orders = $this->orderModel->createOrder($data);
             header('Location: /rapidorder/frontend/orders/create');
         }
-        include 'views/orders/create.php';
+        include 'src/views/orders/create.php';
     }
 
     public function update($id) {
@@ -41,7 +41,7 @@ class OrderController {
         }
         $order = $this->orderModel->getOrder($id);
        
-        include 'views/orders/update.php';
+        include 'src/views/orders/update.php';
     }
 
     public function delete($id) {
@@ -53,6 +53,6 @@ class OrderController {
         $orders = array_filter($this->orderModel->getAllOrders(), function($order) use ($userId) {
             return $order['user_id'] == $userId;
         });
-        include 'views/orders/user_orders.php';
+        include 'src/views/orders/user_orders.php';
     }
 }

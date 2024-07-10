@@ -2,7 +2,12 @@
     "name": "josil/rapid-order",
     "autoload": {
         "psr-4": {
-            "Josil\\RapidOrder\\": "backend/"
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\": "tests/"
         }
     },
     "authors": [
@@ -12,6 +17,6 @@
         }
     ],
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.6"
     }
 }

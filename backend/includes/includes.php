@@ -3,8 +3,8 @@
  * Arquivo responsável por carregar as classes de models e controllers
  */
 require_once 'config/database.php';
-require_once 'controllers/UserController.php';
-require_once 'controllers/OrderController.php';
-require_once 'models/Model.php';
-require_once 'models/User.php';
-require_once 'models/Order.php';
+require_once 'src/controllers/UserController.php';
+require_once 'src/controllers/OrderController.php';
+require_once 'src/models/Model.php';
+require_once 'src/models/User.php';
+require_once 'src/models/Order.php';

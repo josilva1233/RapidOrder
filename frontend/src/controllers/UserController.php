@@ -12,7 +12,7 @@ class UserController {
 
     public function list() {
         $users = $this->userModel->getAllUsers();
-        include 'views/users/list.php';
+        include 'src/views/users/list.php';
     }
 
     public function create() {
@@ -28,7 +28,7 @@ class UserController {
             $this->userModel->createUser($data);
             header('Location: /rapidorder/frontend/users/list');
         }
-        include 'views/users/create.php';
+        include 'src/views/users/create.php';
     }
 
     public function update($id) {
@@ -49,7 +49,7 @@ class UserController {
         $user['document'] = base64_decode($user['document']);
         $user['email'] = base64_decode($user['email']);
         $user['phone_number'] = base64_decode($user['phone_number']);
-        include 'views/users/update.php';
+        include 'src/views/users/update.php';
     }
 
     public function delete($id) {

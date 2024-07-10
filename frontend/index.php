@@ -2,11 +2,11 @@
 /**
  * Summary of namespace App
  */
-require 'models/UserModel.php';
-require 'models/OrderModel.php';
-require 'controllers/AuthController.php';
-require 'controllers/UserController.php';
-require 'controllers/OrderController.php';
+require 'src/models/UserModel.php';
+require 'src/models/OrderModel.php';
+require 'src/controllers/AuthController.php';
+require 'src/controllers/UserController.php';
+require 'src/controllers/OrderController.php';
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = explode('/', $uri);
