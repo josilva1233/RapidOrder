@@ -110,7 +110,7 @@ class OrderTest extends TestCase {
     
         // Verifica se não há mais usuários na base de dados
         $Orders = $this->OrderModel->findAll();
-        //$this->assertEmpty($Orders, "A lista de usuários não está vazia após a exclusão do usuário ID {$lastInsertedId}");
+       //$this->assertEmpty($Orders, "A lista de usuários não está vazia após a exclusão do usuário ID {$lastInsertedId}");
     }
     
 }

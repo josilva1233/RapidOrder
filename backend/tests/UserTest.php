@@ -118,7 +118,7 @@ class UserTest extends TestCase {
     
         // Verifica se não há mais usuários na base de dados
         $users = $this->userModel->findAll();
-        //$this->assertEmpty($users, "A lista de usuários não está vazia após a exclusão do usuário ID {$lastInsertedId}");
+       //$this->assertEmpty($users, "A lista de usuários não está vazia após a exclusão do usuário ID {$lastInsertedId}");
     }
     
 }
