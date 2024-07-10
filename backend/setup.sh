@@ -23,7 +23,7 @@ fi
 read -p "Pressione Enter para continuar após verificar o arquivo de ambiente..."
 
 # Configurar o banco de dados (MySQL como exemplo)
-DB_NAME="apiRapidOrder"
+DB_NAME="rapidorder"
 DB_USER="root"
 DB_PASS=""
 DB_HOST="localhost"

@@ -1,6 +1,6 @@
 
 <!-- Include functions maskDatae -->
-<?php require_once 'helpers/functions.php'; ?>
+<?php require_once 'src/helpers/functions.php'; ?>
 <!-- Include templates -->
 <?php include 'templates/header.php'; ?>
 <?php include 'templates/sidebar.php'; ?>
