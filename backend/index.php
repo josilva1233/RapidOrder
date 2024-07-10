@@ -12,6 +12,8 @@ $orderController = new OrderController($db);
 
 $requestUri = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
+$routUsers = '/rapidorder/backend/api/users';
+$routOrdes = '/rapidorder/backend/api/orders';
 
 if (preg_match('/\/api\/users\/(\d+)/', $requestUri, $matches)) {
     $id = $matches[1];
@@ -22,9 +24,9 @@ if (preg_match('/\/api\/users\/(\d+)/', $requestUri, $matches)) {
     } elseif ($requestMethod === 'DELETE') {
         $userController->delete($id);
     }
-} elseif ($requestUri === '/rapidorder/backend/api/users' && $requestMethod === 'GET') {
+} elseif ($requestUri === $routUsers && $requestMethod === 'GET') {
     $userController->index();
-} elseif ($requestUri === '/rapidorder/backend/api/users' && $requestMethod === 'POST') {
+} elseif ($requestUri === $routUsers && $requestMethod === 'POST') {
     $userController->create();
 } elseif (preg_match('/\/api\/orders\/(\d+)/', $requestUri, $matches)) {
     $id = $matches[1];
@@ -35,11 +37,17 @@ if (preg_match('/\/api\/users\/(\d+)/', $requestUri, $matches)) {
     } elseif ($requestMethod === 'DELETE') {
         $orderController->delete($id);
     }
-} elseif ($requestUri === '/rapidorder/backend/api/orders' && $requestMethod === 'GET') {
+} elseif ($requestUri === $routOrdes && $requestMethod === 'GET') {
     $orderController->index();
-} elseif ($requestUri === '/rapidorder/backend/api/orders' && $requestMethod === 'POST') {
+} elseif ($requestUri === $routOrdes && $requestMethod === 'POST') {
     $orderController->create();
-} else {
+}else {
     header("HTTP/1.0 404 Not Found");
-    echo json_encode(['status' => 'URL incorreta', 'message' => 'Not Found']);
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'URL incorreta',
+        'available_uris' => [$routOrdes, $routUsers],
+        'requested_method' => $_SERVER['REQUEST_METHOD']
+    ]);
 }
+

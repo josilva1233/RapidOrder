@@ -5,10 +5,10 @@
 
 class AuthController {
     public function login() {
-        include 'views/auth/login.php';
+        include 'src/views/auth/login.php';
     }
 
     public function register() {
-        include 'views/auth/register.php';
+        include 'src/views/auth/register.php';
     }
 }

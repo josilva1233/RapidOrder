@@ -1,5 +1,4 @@
-
-<!-- Include functions maskDatae -->
+<!-- Include functions maskData e isBase64Encoded -->
 <?php require_once 'src/helpers/functions.php'; ?>
 <!-- Include templates -->
 <?php include 'templates/header.php'; ?>
@@ -27,9 +26,9 @@
                     <td><?php echo $user['id']; ?></td>
                     <td><?php echo $user['first_name']; ?></td>
                     <td><?php echo $user['last_name']; ?></td>
-                    <td><?php echo maskData(base64_decode($user['document']), 'document'); ?></td>
-                    <td><?php echo maskData(base64_decode($user['email']), 'email'); ?></td>
-                    <td><?php echo maskData(base64_decode($user['phone_number']), 'phone'); ?></td>
+                    <td><?php echo isBase64Encoded($user['document']) ? maskData(base64_decode($user['document']), 'document') : $user['document']; ?></td>
+                    <td><?php echo isBase64Encoded($user['email']) ? maskData(base64_decode($user['email']), 'email') : $user['email']; ?></td>
+                    <td><?php echo isBase64Encoded($user['phone_number']) ? maskData(base64_decode($user['phone_number']), 'phone') : $user['phone_number']; ?></td>
                     <td><?php echo $user['birth_date']; ?></td>
                     <td>
                         <a href="update/<?php echo $user['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
@@ -42,3 +41,4 @@
 </main>
 <!-- Include templates -->
 <?php include 'templates/footer.php'; ?>
+
