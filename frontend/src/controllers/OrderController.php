@@ -38,6 +38,7 @@ class OrderController {
             ];
             $this->orderModel->updateOrder($id, $data);
             header("Location: /rapidorder/frontend/orders/list");
+            
         }
         $order = $this->orderModel->getOrder($id);
        

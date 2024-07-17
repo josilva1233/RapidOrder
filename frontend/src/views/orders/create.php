@@ -6,7 +6,7 @@
     <h2>Create Order</h2>
     <form action="create/" method="POST">
         <label for="user_id">User ID:</label>
-        <input type="text" id="user_id" name="user_id" required>
+        <input type="text" id="user_id" name="user_id"  required>
         <label for="description">description:</label>
         <input type="text" id="description" name="description" required>
         <label for="quantity">Quantity:</label>

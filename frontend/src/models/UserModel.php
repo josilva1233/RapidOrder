@@ -52,4 +52,19 @@ class UserModel {
         $response = file_get_contents($this->apiUrl . '/' . $id, false, $context);
         return json_decode($response, true);
     }
+
+    public function login($email) {
+        $data = ['email' => $email];
+        $options = [
+            'http' => [
+                'header' => "Content-Type: application/json\r\n",
+                'method' => 'POST',
+                'content' => json_encode($data),
+            ],
+        ];
+        $context = stream_context_create($options);
+        $response = file_get_contents($this->apiUrl , false, $context);
+        return json_decode($response, true);
+    }
+    
 }
