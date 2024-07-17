@@ -33,6 +33,7 @@
                     <td>
                         <a href="update?id=<?php echo $user['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
                         <a href="delete?id=<?php echo $user['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="/rapidorder/frontend/orders/user_orders?id=<?php echo $user['id']; ?>" class="btn btn-warning btn-sm">View orders</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -41,4 +42,3 @@
 </main>
 <!-- Include templates -->
 <?php include 'templates/footer.php'; ?>
-

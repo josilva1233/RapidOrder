@@ -1,22 +1,27 @@
 <?php
+
 /**
  * Summary of UserModel
  */
 
-class UserModel {
+class UserModel
+{
     private $apiUrl = 'http://localhost/rapidorder/backend/api/users';
 
-    public function getAllUsers() {
+    public function getAllUsers()
+    {
         $response = file_get_contents($this->apiUrl);
         return json_decode($response, true);
     }
 
-    public function getUser($id) {
+    public function getUser($id)
+    {
         $response = file_get_contents($this->apiUrl . '/' . $id);
         return json_decode($response, true);
     }
 
-    public function createUser($data) {
+    public function createUser($data)
+    {
         $options = [
             'http' => [
                 'header' => "Content-Type: application/json\r\n",
@@ -29,7 +34,8 @@ class UserModel {
         return json_decode($response, true);
     }
 
-    public function updateUser($id, $data) {
+    public function updateUser($id, $data)
+    {
         $options = [
             'http' => [
                 'header' => "Content-Type: application/json\r\n",
@@ -42,7 +48,8 @@ class UserModel {
         return json_decode($response, true);
     }
 
-    public function deleteUser($id) {
+    public function deleteUser($id)
+    {
         $options = [
             'http' => [
                 'method' => 'DELETE',
@@ -53,8 +60,13 @@ class UserModel {
         return json_decode($response, true);
     }
 
-    public function login($email) {
-        $data = ['email' => $email];
+    public function login($email, $first_name, $password)
+    {
+        $data = [
+            'email' => $email,
+            'first_name' => $first_name,
+            'password' => $password
+        ];
         $options = [
             'http' => [
                 'header' => "Content-Type: application/json\r\n",
@@ -63,8 +75,7 @@ class UserModel {
             ],
         ];
         $context = stream_context_create($options);
-        $response = file_get_contents($this->apiUrl , false, $context);
+        $response = file_get_contents($this->apiUrl, false, $context);
         return json_decode($response, true);
     }
-    
 }
