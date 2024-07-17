@@ -18,5 +18,5 @@
     <div class="user-info">
         <span>User: <?php echo $_SESSION['user']['list_name'] ?? 'Guest'; ?></span>
     </div>
-</header>
+
 

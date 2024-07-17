@@ -31,8 +31,8 @@
                     <td><?php echo isBase64Encoded($user['phone_number']) ? maskData(base64_decode($user['phone_number']), 'phone') : $user['phone_number']; ?></td>
                     <td><?php echo $user['birth_date']; ?></td>
                     <td>
-                        <a href="update/<?php echo $user['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
-                        <a href="delete/<?php echo $user['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="update?id=<?php echo $user['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="delete?id=<?php echo $user['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

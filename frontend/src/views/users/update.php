@@ -4,9 +4,9 @@
 <!-- Update User -->
 <main>
     <h2>Update User</h2>
-    <form action="users/update/<?php echo $user['id']; ?>" method="POST">
+    <form action="" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<?php echo $user['first_name']; ?>" required>
+        <input type="text" id="first_name" name="first_name" value="<?php echo $user['first_name']; ?>" required>
         <label for="text">Sobrenome:</label>
         <input type="text" id="last_name" name="last_name" value="<?php echo $user['last_name']; ?>" required>
         <label for="number">document:</label>

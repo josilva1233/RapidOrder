@@ -25,8 +25,8 @@
                     <td><?php echo $order['quantity']; ?></td>
                     <td><?php echo $order['price']; ?></td>                    
                     <td>
-                        <a href="update/<?php echo $order['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
-                        <a href="delete/<?php echo $order['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="update?id=<?php echo $order['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="delete?id=<?php echo $order['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

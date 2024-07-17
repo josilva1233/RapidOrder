@@ -45,7 +45,7 @@ class UserController {
             header('Location: /rapidorder/frontend/users/list');
         }
         $user = $this->userModel->getUser($id);
-        // Decodifica os dados recuperados do banco, se necessário
+        // Decodifica os dados recuperados do banco, se necessário  
         $user['document'] = base64_decode($user['document']);
         $user['email'] = base64_decode($user['email']);
         $user['phone_number'] = base64_decode($user['phone_number']);
